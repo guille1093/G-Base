@@ -3,7 +3,7 @@ package store_test
 import (
 	"testing"
 
-	"github.com/pocketbase/pocketbase/tools/store"
+	"github.com/guille1093/G-Base/tools/store"
 )
 
 func TestNew(t *testing.T) {

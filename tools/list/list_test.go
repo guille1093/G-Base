@@ -3,8 +3,8 @@ package list_test
 import (
 	"testing"
 
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/guille1093/G-Base/tools/list"
+	"github.com/guille1093/G-Base/tools/types"
 )
 
 func TestExistInSliceString(t *testing.T) {

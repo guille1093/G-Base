@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/tests"
+	"github.com/guille1093/G-Base/forms"
+	"github.com/guille1093/G-Base/tests"
 )
 
 func TestUserOauth2LoginValidate(t *testing.T) {

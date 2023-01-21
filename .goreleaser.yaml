@@ -1,4 +1,4 @@
-project_name: pocketbase
+project_name: g-base
 
 dist: .builds
 
@@ -8,9 +8,9 @@ before:
 
 builds:
   - main: ./examples/base
-    binary: pocketbase
+    binary: g-base
     ldflags:
-      - -s -w -X github.com/pocketbase/pocketbase.Version={{ .Version }}
+      - -s -w -X github.com/guille1093/G-Base.Version={{ .Version }}
     env:
       - CGO_ENABLED=0
     goos:

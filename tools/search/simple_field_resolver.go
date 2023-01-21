@@ -3,9 +3,9 @@ package search
 import (
 	"fmt"
 
+	"github.com/guille1093/G-Base/tools/inflector"
+	"github.com/guille1093/G-Base/tools/list"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/list"
 )
 
 // FieldResolver defines an interface for managing search fields.

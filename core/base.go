@@ -10,15 +10,15 @@ import (
 	"time"
 
 	"github.com/fatih/color"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/settings"
+	"github.com/guille1093/G-Base/tools/filesystem"
+	"github.com/guille1093/G-Base/tools/hook"
+	"github.com/guille1093/G-Base/tools/mailer"
+	"github.com/guille1093/G-Base/tools/store"
+	"github.com/guille1093/G-Base/tools/subscriptions"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/settings"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/hook"
-	"github.com/pocketbase/pocketbase/tools/mailer"
-	"github.com/pocketbase/pocketbase/tools/store"
-	"github.com/pocketbase/pocketbase/tools/subscriptions"
 )
 
 const (

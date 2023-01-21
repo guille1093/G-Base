@@ -6,14 +6,14 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/schema"
+	"github.com/guille1093/G-Base/tools/inflector"
+	"github.com/guille1093/G-Base/tools/list"
+	"github.com/guille1093/G-Base/tools/search"
+	"github.com/guille1093/G-Base/tools/security"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/security"
 	"github.com/spf13/cast"
 )
 
@@ -44,6 +44,7 @@ type join struct {
 // managing Record model search fields.
 //
 // Usually used together with `search.Provider`. Example:
+//
 //	resolver := resolvers.NewRecordFieldResolver(
 //		app.Dao(),
 //		myCollection,
@@ -131,6 +132,7 @@ func (r *RecordFieldResolver) UpdateQuery(query *dbx.SelectQuery) error {
 // Resolve implements `search.FieldResolver` interface.
 //
 // Example of resolvable field formats:
+//
 //	id
 //	project.screen.status
 //	@request.status

@@ -20,7 +20,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/disintegration/imaging"
 	"github.com/gabriel-vasile/mimetype"
-	"github.com/pocketbase/pocketbase/tools/list"
+	"github.com/guille1093/G-Base/tools/list"
 	"gocloud.dev/blob"
 	"gocloud.dev/blob/fileblob"
 	"gocloud.dev/blob/s3blob"
@@ -308,7 +308,7 @@ func (s *System) Serve(res http.ResponseWriter, req *http.Request, fileKey strin
 
 	// clickjacking shouldn't be a concern when serving uploaded files,
 	// so it safe to unset the global X-Frame-Options to allow files embedding
-	// (see https://github.com/pocketbase/pocketbase/issues/677)
+	// (see https://github.com/guille1093/G-Base/issues/677)
 	res.Header().Del("X-Frame-Options")
 
 	res.Header().Set("Content-Disposition", disposition+"; filename="+name)
@@ -319,7 +319,7 @@ func (s *System) Serve(res http.ResponseWriter, req *http.Request, fileKey strin
 	// all HTTP date/time stamps MUST be represented in Greenwich Mean Time (GMT)
 	// (see https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1)
 	//
-	// NB! time.LoadLocation may fail on non-Unix systems (see https://github.com/pocketbase/pocketbase/issues/45)
+	// NB! time.LoadLocation may fail on non-Unix systems (see https://github.com/guille1093/G-Base/issues/45)
 	location, locationErr := time.LoadLocation("GMT")
 	if locationErr == nil {
 		res.Header().Set("Last-Modified", br.ModTime().In(location).Format("Mon, 02 Jan 06 15:04:05 MST"))

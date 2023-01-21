@@ -1,13 +1,13 @@
 package core
 
 import (
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/models/settings"
-	"github.com/pocketbase/pocketbase/tools/mailer"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/subscriptions"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/schema"
+	"github.com/guille1093/G-Base/models/settings"
+	"github.com/guille1093/G-Base/tools/mailer"
+	"github.com/guille1093/G-Base/tools/search"
+	"github.com/guille1093/G-Base/tools/subscriptions"
 
 	"github.com/labstack/echo/v5"
 )

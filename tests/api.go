@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/guille1093/G-Base/apis"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/apis"
 )
 
 // ApiScenario defines a single api request test case/scenario.

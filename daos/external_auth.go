@@ -3,8 +3,8 @@ package daos
 import (
 	"errors"
 
+	"github.com/guille1093/G-Base/models"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
 )
 
 // ExternalAuthQuery returns a new ExternalAuth select query.
@@ -12,8 +12,8 @@ func (dao *Dao) ExternalAuthQuery() *dbx.SelectQuery {
 	return dao.ModelQuery(&models.ExternalAuth{})
 }
 
-/// FindAllExternalAuthsByRecord returns all ExternalAuth models
-/// linked to the provided auth record.
+// / FindAllExternalAuthsByRecord returns all ExternalAuth models
+// / linked to the provided auth record.
 func (dao *Dao) FindAllExternalAuthsByRecord(authRecord *models.Record) ([]*models.ExternalAuth, error) {
 	auths := []*models.ExternalAuth{}
 

@@ -6,13 +6,13 @@ import (
 	"math"
 	"strings"
 
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/schema"
+	"github.com/guille1093/G-Base/tools/inflector"
+	"github.com/guille1093/G-Base/tools/list"
+	"github.com/guille1093/G-Base/tools/security"
+	"github.com/guille1093/G-Base/tools/types"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/security"
-	"github.com/pocketbase/pocketbase/tools/types"
 	"github.com/spf13/cast"
 )
 
@@ -99,6 +99,7 @@ func (dao *Dao) FindRecordsByIds(
 // Returns an empty slice if no records are found.
 //
 // Example:
+//
 //	expr1 := dbx.HashExp{"email": "test@example.com"}
 //	expr2 := dbx.NewExp("LOWER(username) = {:username}", dbx.Params{"username": "test"})
 //	dao.FindRecordsByExpr("example", expr1, expr2)

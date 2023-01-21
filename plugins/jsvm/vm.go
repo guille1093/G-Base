@@ -5,9 +5,9 @@
 //
 // 1. JS Migrations loader:
 //
-// 	jsvm.MustRegisterMigrations(app, &jsvm.MigrationsOptions{
-// 		Dir: "custom_js_migrations_dir_path", // default to "pb_data/../pb_migrations"
-// 	})
+//	jsvm.MustRegisterMigrations(app, &jsvm.MigrationsOptions{
+//		Dir: "custom_js_migrations_dir_path", // default to "pb_data/../pb_migrations"
+//	})
 package jsvm
 
 import (
@@ -17,11 +17,11 @@ import (
 	"unicode"
 
 	"github.com/dop251/goja"
+	"github.com/guille1093/G-Base/apis"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/schema"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
 )
 
 func NewBaseVM() *goja.Runtime {

@@ -6,9 +6,9 @@ import (
 
 	"github.com/dop251/goja_nodejs/console"
 	"github.com/dop251/goja_nodejs/require"
+	"github.com/guille1093/G-Base/core"
+	m "github.com/guille1093/G-Base/migrations"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	m "github.com/pocketbase/pocketbase/migrations"
 )
 
 // MigrationsOptions defines optional struct to customize the default migrations loader behavior.
@@ -26,7 +26,6 @@ type migrations struct {
 	options *MigrationsOptions
 }
 
-//
 // MustRegisterMigrations registers the migrations loader plugin to
 // the provided app instance and panics if it fails.
 //

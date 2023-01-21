@@ -3,7 +3,7 @@ package schema_test
 import (
 	"testing"
 
-	"github.com/pocketbase/pocketbase/models/schema"
+	"github.com/guille1093/G-Base/models/schema"
 )
 
 func TestNewSchemaAndFields(t *testing.T) {

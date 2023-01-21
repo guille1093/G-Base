@@ -5,12 +5,12 @@ import (
 	"log"
 	"net/mail"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/mails/templates"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/settings"
-	"github.com/pocketbase/pocketbase/tokens"
-	"github.com/pocketbase/pocketbase/tools/mailer"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/mails/templates"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/settings"
+	"github.com/guille1093/G-Base/tokens"
+	"github.com/guille1093/G-Base/tools/mailer"
 )
 
 // SendRecordPasswordReset sends a password reset request email to the specified user.

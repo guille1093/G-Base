@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/guille1093/G-Base/apis"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/tests"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
 )
 
 func TestRequestData(t *testing.T) {

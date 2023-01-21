@@ -4,11 +4,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/plugins/jsvm"
-	"github.com/pocketbase/pocketbase/tests"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/schema"
+	"github.com/guille1093/G-Base/plugins/jsvm"
+	"github.com/guille1093/G-Base/tests"
 )
 
 func TestBaseVMUnmarshal(t *testing.T) {

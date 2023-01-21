@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
+	"github.com/guille1093/G-Base/forms"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/tests"
 )
 
 func TestNewAdminUpsert(t *testing.T) {

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/guille1093/G-Base/models"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
 	"golang.org/x/sync/semaphore"
 )
 
@@ -85,18 +85,18 @@ func (dao *Dao) NonconcurrentDB() dbx.Builder {
 //
 // Example:
 //
-// 	func someLongRunningTransaction() error {
-// 		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-// 		defer cancel()
-// 		if err := app.Dao().Block(ctx); err != nil {
-// 			return err
-// 		}
-// 		defer app.Dao().Continue()
+//	func someLongRunningTransaction() error {
+//		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+//		defer cancel()
+//		if err := app.Dao().Block(ctx); err != nil {
+//			return err
+//		}
+//		defer app.Dao().Continue()
 //
-// 		return app.Dao().RunInTransaction(func (txDao *daos.Dao) error {
-// 			// some long running read&write transaction...
-// 		})
-// 	}
+//		return app.Dao().RunInTransaction(func (txDao *daos.Dao) error {
+//			// some long running read&write transaction...
+//		})
+//	}
 func (dao *Dao) Block(ctx context.Context) error {
 	if dao.sem == nil {
 		dao.mux.Lock()

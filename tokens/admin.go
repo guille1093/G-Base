@@ -2,9 +2,9 @@ package tokens
 
 import (
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/tools/security"
 )
 
 // NewAdminAuthToken generates and returns a new admin authentication token.

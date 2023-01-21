@@ -7,12 +7,12 @@ import (
 	"strings"
 
 	"github.com/fatih/color"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/schema"
+	"github.com/guille1093/G-Base/tools/types"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/types"
 	"github.com/spf13/cobra"
 )
 

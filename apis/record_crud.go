@@ -6,14 +6,14 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/forms"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/resolvers"
+	"github.com/guille1093/G-Base/tools/search"
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/resolvers"
-	"github.com/pocketbase/pocketbase/tools/search"
 )
 
 const expandQueryParam = "expand"

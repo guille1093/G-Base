@@ -3,8 +3,8 @@ package daos_test
 import (
 	"testing"
 
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/guille1093/G-Base/tests"
+	"github.com/guille1093/G-Base/tools/security"
 )
 
 func TestSaveAndFindSettings(t *testing.T) {

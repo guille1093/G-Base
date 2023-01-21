@@ -1,50 +1,50 @@
 ## (WIP)
 
-- Added Strava OAuth2 provider ([#1443](https://github.com/pocketbase/pocketbase/pull/1443); thanks @szsascha).
+- Added Strava OAuth2 provider ([#1443](https://github.com/guille1093/G-Base/pull/1443); thanks @szsascha).
 
-- Added Gitee OAuth2 provider ([#1448](https://github.com/pocketbase/pocketbase/pull/1448); thanks @yuxiang-gao).
+- Added Gitee OAuth2 provider ([#1448](https://github.com/guille1093/G-Base/pull/1448); thanks @yuxiang-gao).
 
-- Added IME status check to the textarea keydown handler ([#1370](https://github.com/pocketbase/pocketbase/pull/1370); thanks @tenthree).
+- Added IME status check to the textarea keydown handler ([#1370](https://github.com/guille1093/G-Base/pull/1370); thanks @tenthree).
 
-- Fixed the text wrapping in the Admin UI listing searchbar ([#1416](https://github.com/pocketbase/pocketbase/issues/1416)).
+- Fixed the text wrapping in the Admin UI listing searchbar ([#1416](https://github.com/guille1093/G-Base/issues/1416)).
 
-- Added `filesystem.NewFileFromBytes()` helper ([#1420](https://github.com/pocketbase/pocketbase/pull/1420); thanks @dschissler).
+- Added `filesystem.NewFileFromBytes()` helper ([#1420](https://github.com/guille1093/G-Base/pull/1420); thanks @dschissler).
 
-- Fixed number field value output in the records listing ([#1447](https://github.com/pocketbase/pocketbase/issues/1447)).
+- Fixed number field value output in the records listing ([#1447](https://github.com/guille1093/G-Base/issues/1447)).
 
-- Added webp to the default images mime type presets list ([#1469](https://github.com/pocketbase/pocketbase/pull/1469); thanks @khairulhaaziq).
+- Added webp to the default images mime type presets list ([#1469](https://github.com/guille1093/G-Base/pull/1469); thanks @khairulhaaziq).
 
 
 ## v0.10.4
 
-- Fixed `Record.MergeExpand` panic when the main model expand map is not initialized ([#1365](https://github.com/pocketbase/pocketbase/issues/1365)).
+- Fixed `Record.MergeExpand` panic when the main model expand map is not initialized ([#1365](https://github.com/guille1093/G-Base/issues/1365)).
 
 
 ## v0.10.3
 
-- ! Renamed the metadata key `original_filename` to `original-filename` due to an S3 file upload error caused by the underscore character ([#1343](https://github.com/pocketbase/pocketbase/pull/1343); thanks @yuxiang-gao).
+- ! Renamed the metadata key `original_filename` to `original-filename` due to an S3 file upload error caused by the underscore character ([#1343](https://github.com/guille1093/G-Base/pull/1343); thanks @yuxiang-gao).
 
-- Fixed request verification docs api url ([#1332](https://github.com/pocketbase/pocketbase/pull/1332); thanks @JoyMajumdar2001)
+- Fixed request verification docs api url ([#1332](https://github.com/guille1093/G-Base/pull/1332); thanks @JoyMajumdar2001)
 
-- Excluded `collectionId` and `collectionName` from the displayable relation props list ([1322](https://github.com/pocketbase/pocketbase/issues/1322); thanks @dhall2).
+- Excluded `collectionId` and `collectionName` from the displayable relation props list ([1322](https://github.com/guille1093/G-Base/issues/1322); thanks @dhall2).
 
 
 ## v0.10.2
 
-- Fixed nested multiple expands with shared path ([#586](https://github.com/pocketbase/pocketbase/issues/586#issuecomment-1357784227)).
+- Fixed nested multiple expands with shared path ([#586](https://github.com/guille1093/G-Base/issues/586#issuecomment-1357784227)).
   A new helper method `models.Record.MergeExpand(map[string]any)` was also added to simplify the expand handling and unit testing.
 
 
 ## v0.10.1
 
-- Fixed nested transactions deadlock when authenticating with OAuth2 ([#1291](https://github.com/pocketbase/pocketbase/issues/1291)).
+- Fixed nested transactions deadlock when authenticating with OAuth2 ([#1291](https://github.com/guille1093/G-Base/issues/1291)).
 
 
 ## v0.10.0
 
 - Added `/api/health` endpoint (thanks @MarvinJWendt).
 
-- Added support for SMTP `LOGIN` auth for Microsoft/Outlook and other providers that don't support the `PLAIN` auth method ([#1217](https://github.com/pocketbase/pocketbase/discussions/1217#discussioncomment-4387970)).
+- Added support for SMTP `LOGIN` auth for Microsoft/Outlook and other providers that don't support the `PLAIN` auth method ([#1217](https://github.com/guille1093/G-Base/discussions/1217#discussioncomment-4387970)).
 
 - Reduced memory consumption (you can expect ~20% less allocated memory).
 
@@ -54,9 +54,9 @@
 
 - Removed the unnecessary parenthesis in the generated filter SQL query, reducing the "_parse stack overflow_" errors.
 
-- Fixed `~` expressions backslash literal escaping ([#1231](https://github.com/pocketbase/pocketbase/discussions/1231)).
+- Fixed `~` expressions backslash literal escaping ([#1231](https://github.com/guille1093/G-Base/discussions/1231)).
 
-- Refactored the `core.app.Bootstrap()` to be called before starting the cobra commands ([#1267](https://github.com/pocketbase/pocketbase/discussions/1267)).
+- Refactored the `core.app.Bootstrap()` to be called before starting the cobra commands ([#1267](https://github.com/guille1093/G-Base/discussions/1267)).
 
 - ! Changed `pocketbase.NewWithConfig(config Config)` to `pocketbase.NewWithConfig(config *Config)` and added 4 new config settings:
   ```go
@@ -92,29 +92,29 @@
 
 ## v0.9.2
 
-- Fixed field column name conflict on record deletion ([#1220](https://github.com/pocketbase/pocketbase/discussions/1220)).
+- Fixed field column name conflict on record deletion ([#1220](https://github.com/guille1093/G-Base/discussions/1220)).
 
 
 ## v0.9.1
 
 - Moved the record file upload and delete out of the db transaction to minimize the locking times.
 
-- Added `Dao` query semaphore and base fail/retry handling to improve the concurrent writes throughput ([#1187](https://github.com/pocketbase/pocketbase/issues/1187)).
+- Added `Dao` query semaphore and base fail/retry handling to improve the concurrent writes throughput ([#1187](https://github.com/guille1093/G-Base/issues/1187)).
 
 - Fixed records cascade deletion when there are "A<->B" relation references.
 
-- Replaced `c.QueryString()` with `c.QueryParams().Encode()` to allow loading middleware modified query parameters in the default crud actions ([#1210](https://github.com/pocketbase/pocketbase/discussions/1210)).
+- Replaced `c.QueryString()` with `c.QueryParams().Encode()` to allow loading middleware modified query parameters in the default crud actions ([#1210](https://github.com/guille1093/G-Base/discussions/1210)).
 
-- Fixed the datetime field not triggering the `onChange` event on manual field edit and added a "Clear" button ([#1219](https://github.com/pocketbase/pocketbase/issues/1219)).
+- Fixed the datetime field not triggering the `onChange` event on manual field edit and added a "Clear" button ([#1219](https://github.com/guille1093/G-Base/issues/1219)).
 
 - Updated the GitHub goreleaser action to use go 1.19.4 since it comes with [some security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.4+label%3ACherryPickApproved).
 
 
 ## v0.9.0
 
-- Fixed concurrent multi-relation cascade update/delete ([#1138](https://github.com/pocketbase/pocketbase/issues/1138)).
+- Fixed concurrent multi-relation cascade update/delete ([#1138](https://github.com/guille1093/G-Base/issues/1138)).
 
-- Added the raw OAuth2 user data (`meta.rawUser`) and OAuth2 access token (`meta.accessToken`) to the auth response ([#654](https://github.com/pocketbase/pocketbase/discussions/654)).
+- Added the raw OAuth2 user data (`meta.rawUser`) and OAuth2 access token (`meta.accessToken`) to the auth response ([#654](https://github.com/guille1093/G-Base/discussions/654)).
 
 - `BaseModel.UnmarkAsNew()` method was renamed to `BaseModel.MarkAsNotNew()`.
   Additionally, to simplify the insert model queries with custom IDs, it is no longer required to call `MarkAsNew()` for manually initialized models with set ID since now this is the default state.
@@ -154,7 +154,7 @@
   attrs.Metadata["original_name"]
   ```
 
-- Added support for `Partial/Range` file requests ([#1125](https://github.com/pocketbase/pocketbase/issues/1125)).
+- Added support for `Partial/Range` file requests ([#1125](https://github.com/guille1093/G-Base/issues/1125)).
   This is a minor breaking change if you are using `filesystem.Serve` (eg. as part of a custom `OnFileDownloadRequest` hook):
   ```go
   // old
@@ -258,15 +258,15 @@
 
 **⚠️ This release contains breaking changes and requires some manual migration steps!**
 
-The biggest change is the merge of the `User` models and the `profiles` collection per [#376](https://github.com/pocketbase/pocketbase/issues/376).
+The biggest change is the merge of the `User` models and the `profiles` collection per [#376](https://github.com/guille1093/G-Base/issues/376).
 There is no longer `user` type field and the users are just an "auth" collection (we now support **collection types**, currently only "base" and "auth").
 This should simplify the users management and at the same time allow us to have unlimited multiple "auth" collections each with their own custom fields and authentication options (eg. staff, client, etc.).
 
 In addition to the `Users` and `profiles` merge, this release comes with several other improvements:
 
-- Added indirect expand support [#312](https://github.com/pocketbase/pocketbase/issues/312#issuecomment-1242893496).
+- Added indirect expand support [#312](https://github.com/guille1093/G-Base/issues/312#issuecomment-1242893496).
 
-- The `json` field type now supports filtering and sorting [#423](https://github.com/pocketbase/pocketbase/issues/423#issuecomment-1258302125).
+- The `json` field type now supports filtering and sorting [#423](https://github.com/guille1093/G-Base/issues/423#issuecomment-1258302125).
 
 - The `relation` field now allows unlimited `maxSelect` (aka. without upper limit).
 
@@ -282,7 +282,7 @@ In addition to the `Users` and `profiles` merge, this release comes with several
 
 - Added several new OAuth2 providers (Microsoft Azure AD, Spotify, Twitch, Kakao).
 
-- Improved memory usage on large file uploads [#835](https://github.com/pocketbase/pocketbase/discussions/835).
+- Improved memory usage on large file uploads [#835](https://github.com/guille1093/G-Base/discussions/835).
 
 - More detailed API preview docs and site documentation (the repo is located at https://github.com/pocketbase/site).
 
@@ -653,7 +653,7 @@ Please check the individual SDK package changelog and apply the necessary change
     </tr>
   </table>
 
-- Moved the formatted `ApiError` struct and factories to the `github.com/pocketbase/pocketbase/apis` subpackage:
+- Moved the formatted `ApiError` struct and factories to the `github.com/guille1093/G-Base/apis` subpackage:
   <table class="d-table" width="100%">
     <tr>
       <th>Old</th>
@@ -663,8 +663,8 @@ Please check the individual SDK package changelog and apply the necessary change
       <td colspan="2"><em>Import path</em></td>
     </tr>
     <tr valign="top">
-      <td>github.com/pocketbase/pocketbase/<strong>tools/rest</strong></td>
-      <td>github.com/pocketbase/pocketbase/<strong>apis</strong></td>
+      <td>github.com/guille1093/G-Base/<strong>tools/rest</strong></td>
+      <td>github.com/guille1093/G-Base/<strong>apis</strong></td>
     </tr>
     <tr valign="top">
       <td colspan="2"><em>Fields</em></td>

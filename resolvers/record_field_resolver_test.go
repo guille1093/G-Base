@@ -5,10 +5,10 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/resolvers"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/list"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/resolvers"
+	"github.com/guille1093/G-Base/tests"
+	"github.com/guille1093/G-Base/tools/list"
 )
 
 func TestRecordFieldResolverUpdateQuery(t *testing.T) {

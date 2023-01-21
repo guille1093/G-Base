@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/resolvers"
+	"github.com/guille1093/G-Base/tools/rest"
+	"github.com/guille1093/G-Base/tools/search"
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/resolvers"
-	"github.com/pocketbase/pocketbase/tools/rest"
-	"github.com/pocketbase/pocketbase/tools/search"
 )
 
 const ContextRequestDataKey = "requestData"
@@ -47,17 +47,17 @@ func RequestData(c echo.Context) *models.RequestData {
 }
 
 // EnrichRecord parses the request context and enrich the provided record:
-// - expands relations (if defaultExpands and/or ?expand query param is set)
-// - ensures that the emails of the auth record and its expanded auth relations
-//   are visibe only for the current logged admin, record owner or record with manage access
+//   - expands relations (if defaultExpands and/or ?expand query param is set)
+//   - ensures that the emails of the auth record and its expanded auth relations
+//     are visibe only for the current logged admin, record owner or record with manage access
 func EnrichRecord(c echo.Context, dao *daos.Dao, record *models.Record, defaultExpands ...string) error {
 	return EnrichRecords(c, dao, []*models.Record{record}, defaultExpands...)
 }
 
 // EnrichRecords parses the request context and enriches the provided records:
-// - expands relations (if defaultExpands and/or ?expand query param is set)
-// - ensures that the emails of the auth records and their expanded auth relations
-//   are visibe only for the current logged admin, record owner or record with manage access
+//   - expands relations (if defaultExpands and/or ?expand query param is set)
+//   - ensures that the emails of the auth records and their expanded auth relations
+//     are visibe only for the current logged admin, record owner or record with manage access
 func EnrichRecords(c echo.Context, dao *daos.Dao, records []*models.Record, defaultExpands ...string) error {
 	requestData := RequestData(c)
 

@@ -1,6 +1,6 @@
 package models
 
-import "github.com/pocketbase/pocketbase/tools/types"
+import "github.com/guille1093/G-Base/tools/types"
 
 var _ Model = (*Request)(nil)
 

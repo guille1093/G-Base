@@ -1,4 +1,4 @@
-module github.com/pocketbase/pocketbase
+module github.com/guille1093/G-Base
 
 go 1.18
 

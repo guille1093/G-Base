@@ -9,14 +9,14 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/forms"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/resolvers"
+	"github.com/guille1093/G-Base/tools/search"
+	"github.com/guille1093/G-Base/tools/subscriptions"
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/resolvers"
-	"github.com/pocketbase/pocketbase/tools/search"
-	"github.com/pocketbase/pocketbase/tools/subscriptions"
 )
 
 // bindRealtimeApi registers the realtime api endpoints.
@@ -54,7 +54,7 @@ func (api *realtimeApi) connect(c echo.Context) error {
 	c.Response().Header().Set("Content-Type", "text/event-stream; charset=UTF-8")
 	c.Response().Header().Set("Cache-Control", "no-store")
 	c.Response().Header().Set("Connection", "keep-alive")
-	// https://github.com/pocketbase/pocketbase/discussions/480#discussioncomment-3657640
+	// https://github.com/guille1093/G-Base/discussions/480#discussioncomment-3657640
 	// https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_buffering
 	c.Response().Header().Set("X-Accel-Buffering", "no")
 

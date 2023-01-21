@@ -5,14 +5,14 @@
 //
 // Example usage:
 //
-// 	migratecmd.MustRegister(app, app.RootCmd, &migratecmd.Options{
-// 		TemplateLang: migratecmd.TemplateLangJS, // default to migratecmd.TemplateLangGo
-// 		Automigrate:  true,
-// 		Dir:          "migrations_dir_path", // optional template migrations path; default to "pb_migrations" (for JS) and "migrations" (for Go)
-// 	})
+//	migratecmd.MustRegister(app, app.RootCmd, &migratecmd.Options{
+//		TemplateLang: migratecmd.TemplateLangJS, // default to migratecmd.TemplateLangGo
+//		Automigrate:  true,
+//		Dir:          "migrations_dir_path", // optional template migrations path; default to "pb_migrations" (for JS) and "migrations" (for Go)
+//	})
 //
-// 	Note: To allow running JS migrations you'll need to enable first
-// 	[jsvm.MustRegisterMigrations].
+//	Note: To allow running JS migrations you'll need to enable first
+//	[jsvm.MustRegisterMigrations].
 package migratecmd
 
 import (
@@ -24,11 +24,11 @@ import (
 	"time"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tools/inflector"
-	"github.com/pocketbase/pocketbase/tools/migrate"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/migrations"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/tools/inflector"
+	"github.com/guille1093/G-Base/tools/migrate"
 	"github.com/spf13/cobra"
 )
 

@@ -5,9 +5,9 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
 )
 
 // RecordPasswordLogin is record username/email + password login form.

@@ -4,13 +4,13 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/forms"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/tokens"
+	"github.com/guille1093/G-Base/tools/routine"
+	"github.com/guille1093/G-Base/tools/search"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tokens"
-	"github.com/pocketbase/pocketbase/tools/routine"
-	"github.com/pocketbase/pocketbase/tools/search"
 )
 
 // bindAdminApi registers the admin api endpoints and the corresponding handlers.

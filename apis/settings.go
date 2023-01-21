@@ -4,10 +4,10 @@ import (
 	"net/http"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/forms"
+	"github.com/guille1093/G-Base/tools/security"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/tools/security"
 )
 
 // bindSettingsApi registers the settings api endpoints.

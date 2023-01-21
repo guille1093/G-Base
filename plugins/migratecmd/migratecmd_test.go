@@ -6,12 +6,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/plugins/migratecmd"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/schema"
+	"github.com/guille1093/G-Base/plugins/migratecmd"
+	"github.com/guille1093/G-Base/tests"
+	"github.com/guille1093/G-Base/tools/types"
 )
 
 func TestAutomigrateCollectionCreate(t *testing.T) {
@@ -66,9 +66,9 @@ import (
 	"encoding/json"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	m "github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/models"
+	"github.com/guille1093/G-Base/daos"
+	m "github.com/guille1093/G-Base/migrations"
+	"github.com/guille1093/G-Base/models"
 )
 
 func init() {
@@ -231,9 +231,9 @@ import (
 	"encoding/json"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	m "github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/models"
+	"github.com/guille1093/G-Base/daos"
+	m "github.com/guille1093/G-Base/migrations"
+	"github.com/guille1093/G-Base/models"
 )
 
 func init() {
@@ -461,10 +461,10 @@ import (
 	"encoding/json"
 
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/daos"
-	m "github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/guille1093/G-Base/daos"
+	m "github.com/guille1093/G-Base/migrations"
+	"github.com/guille1093/G-Base/models/schema"
+	"github.com/guille1093/G-Base/tools/types"
 )
 
 func init() {

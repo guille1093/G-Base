@@ -3,10 +3,10 @@ package forms
 import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/forms/validators"
-	"github.com/pocketbase/pocketbase/models"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/forms/validators"
+	"github.com/guille1093/G-Base/models"
 )
 
 // AdminUpsert is a [models.Admin] upsert (create/update) form.

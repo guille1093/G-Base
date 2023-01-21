@@ -3,8 +3,8 @@ package forms_test
 import (
 	"testing"
 
-	"github.com/pocketbase/pocketbase/forms"
-	"github.com/pocketbase/pocketbase/tests"
+	"github.com/guille1093/G-Base/forms"
+	"github.com/guille1093/G-Base/tests"
 )
 
 func TestRecordEmailLoginValidateAndSubmit(t *testing.T) {

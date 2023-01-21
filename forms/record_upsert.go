@@ -12,16 +12,16 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/forms/validators"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/models/schema"
+	"github.com/guille1093/G-Base/tools/filesystem"
+	"github.com/guille1093/G-Base/tools/list"
+	"github.com/guille1093/G-Base/tools/rest"
+	"github.com/guille1093/G-Base/tools/security"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/forms/validators"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/rest"
-	"github.com/pocketbase/pocketbase/tools/security"
 	"github.com/spf13/cast"
 )
 
@@ -252,9 +252,9 @@ func (form *RecordUpsert) LoadRequest(r *http.Request, keyPrefix string) error {
 //
 // Example
 //
-// 	f1, _ := filesystem.NewFileFromPath("/path/to/file1.txt")
-// 	f2, _ := filesystem.NewFileFromPath("/path/to/file2.txt")
-// 	form.AddFiles("documents", f1, f2)
+//	f1, _ := filesystem.NewFileFromPath("/path/to/file1.txt")
+//	f2, _ := filesystem.NewFileFromPath("/path/to/file2.txt")
+//	form.AddFiles("documents", f1, f2)
 func (form *RecordUpsert) AddFiles(key string, files ...*filesystem.File) error {
 	field := form.record.Collection().Schema.GetFieldByName(key)
 	if field == nil || field.Type != schema.FieldTypeFile {
@@ -304,11 +304,11 @@ func (form *RecordUpsert) AddFiles(key string, files ...*filesystem.File) error 
 //
 // Example
 //
-//  // mark only only 2 files for removal
-// 	form.AddFiles("documents", "file1_aw4bdrvws6.txt", "file2_xwbs36bafv.txt")
+//	 // mark only only 2 files for removal
+//		form.AddFiles("documents", "file1_aw4bdrvws6.txt", "file2_xwbs36bafv.txt")
 //
-// 	// mark all "documents" files for removal
-// 	form.AddFiles("documents")
+//		// mark all "documents" files for removal
+//		form.AddFiles("documents")
 func (form *RecordUpsert) RemoveFiles(key string, toDelete ...string) error {
 	field := form.record.Collection().Schema.GetFieldByName(key)
 	if field == nil || field.Type != schema.FieldTypeFile {

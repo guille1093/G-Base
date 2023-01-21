@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"testing"
 
+	"github.com/guille1093/G-Base/apis"
+	"github.com/guille1093/G-Base/tests"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/tests"
 )
 
 func Test404(t *testing.T) {

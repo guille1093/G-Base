@@ -1,16 +1,15 @@
 package main
 
 import (
+	"github.com/guille1093/G-Base"
+	"github.com/guille1093/G-Base/apis"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/plugins/jsvm"
+	"github.com/guille1093/G-Base/plugins/migratecmd"
 	"log"
 	"os"
 	"path/filepath"
 	"strings"
-
-	"github.com/pocketbase/pocketbase"
-	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/plugins/jsvm"
-	"github.com/pocketbase/pocketbase/plugins/migratecmd"
 )
 
 func main() {

@@ -5,7 +5,7 @@ package forms
 import (
 	"regexp"
 
-	"github.com/pocketbase/pocketbase/models"
+	"github.com/guille1093/G-Base/models"
 )
 
 // base ID value regex pattern

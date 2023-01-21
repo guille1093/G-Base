@@ -8,14 +8,14 @@ import (
 	"strings"
 	"time"
 
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/models"
+	"github.com/guille1093/G-Base/tokens"
+	"github.com/guille1093/G-Base/tools/list"
+	"github.com/guille1093/G-Base/tools/routine"
+	"github.com/guille1093/G-Base/tools/security"
+	"github.com/guille1093/G-Base/tools/types"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tokens"
-	"github.com/pocketbase/pocketbase/tools/list"
-	"github.com/pocketbase/pocketbase/tools/routine"
-	"github.com/pocketbase/pocketbase/tools/security"
-	"github.com/pocketbase/pocketbase/tools/types"
 	"github.com/spf13/cast"
 )
 
@@ -59,9 +59,12 @@ func RequireGuestOnly() echo.MiddlewareFunc {
 // specifying their names.
 //
 // Example:
-//   apis.RequireRecordAuth()
+//
+//	apis.RequireRecordAuth()
+//
 // Or:
-//   apis.RequireRecordAuth("users", "supervisors")
+//
+//	apis.RequireRecordAuth("users", "supervisors")
 //
 // To restrict the auth record only to the loaded context collection,
 // use [apis.RequireSameContextRecordAuth()] instead.
@@ -83,7 +86,6 @@ func RequireRecordAuth(optCollectionNames ...string) echo.MiddlewareFunc {
 	}
 }
 
-//
 // RequireSameContextRecordAuth middleware requires a request to have
 // a valid record Authorization header.
 //

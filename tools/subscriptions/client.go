@@ -3,7 +3,7 @@ package subscriptions
 import (
 	"sync"
 
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/guille1093/G-Base/tools/security"
 )
 
 // Message defines a client's channel data.

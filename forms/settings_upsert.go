@@ -4,9 +4,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models/settings"
+	"github.com/guille1093/G-Base/core"
+	"github.com/guille1093/G-Base/daos"
+	"github.com/guille1093/G-Base/models/settings"
 )
 
 // SettingsUpsert is a [settings.Settings] upsert (create/update) form.

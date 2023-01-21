@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"testing"
 
+	"github.com/guille1093/G-Base/tests"
+	"github.com/guille1093/G-Base/tools/filesystem"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
 )
 
 func TestNewFileFromPath(t *testing.T) {
