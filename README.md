@@ -3,6 +3,8 @@ G-base is a powerful and user-friendly database management tool that allows you 
 
 ## What's new in this fork?
 This is a fork of Pocketbase and includes several enhancements to the original version:
+* Spanish IU support.
+* A beloved dark mode with a dark purple color palette.
 
 * Model validations: We have added model validation checks to ensure that your data is always accurate and consistent.
 
@@ -16,8 +18,8 @@ We welcome contributions to G-Base! If you have an idea for a new feature or hav
 
 ## Future plans
 * I'm currently working on adding support for more database types, like MySQL or PostgreSQL.
-* Also support for GRPC or GraphQL is planned in the future.
-* A beloved dark mode is also on the roadmap.
+* MQTT broker to integrate IoT devices to take advantage of gbase real-time subscriptions
+* Support for GraphQL is planned in the future.
 * And of course, always looking for ways to improve the user experience and make G-base even more powerful and easy to use.
 
 ## Security 
