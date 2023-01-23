@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	app := pocketbase.New()
+	app := gbase.New()
 
 	// ---------------------------------------------------------------
 	// Optional plugin flags:

@@ -18,7 +18,7 @@
             rel="noopener noreferrer"
             title="Releases"
         >
-            <span class="txt">PocketBase {import.meta.env.PB_VERSION}</span>
+            <span class="txt">GBase {import.meta.env.PB_VERSION}</span>
         </a>
     </footer>
 </div>

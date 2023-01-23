@@ -9,13 +9,13 @@
         {#if !nobranding}
             <div class="block txt-center m-b-lg">
                 <figure class="logo">
-                    <img
-                        src="{import.meta.env.BASE_URL}images/logo.svg"
-                        alt="PocketBase logo"
-                        width="40"
-                        height="40"
-                    />
-                    <span class="txt">Pocket<strong>Base</strong></span>
+<!--                    <img-->
+<!--                        src="{import.meta.env.BASE_URL}images/logo.svg"-->
+<!--                        alt="PocketBase logo"-->
+<!--                        width="30"-->
+<!--                        height="30"-->
+<!--                    />-->
+                    <span class="txt">G-<strong>Base</strong></span>
                 </figure>
             </div>
             <div class="clearfix" />

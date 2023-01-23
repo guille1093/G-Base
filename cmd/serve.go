@@ -91,7 +91,7 @@ func NewServeCommand(app core.App, showStartBanner bool) *cobra.Command {
 				}
 				regular := color.New()
 				bold := color.New(color.Bold).Add(color.FgGreen)
-				bold.Printf("> Server started at: %s\n", color.CyanString("%s://%s", schema, serverConfig.Addr))
+				bold.Printf("> Servidor iniciado en: %s\n", color.CyanString("%s://%s", schema, serverConfig.Addr))
 				regular.Printf("  - REST API: %s\n", color.CyanString("%s://%s/api/", schema, serverConfig.Addr))
 				regular.Printf("  - Admin UI: %s\n", color.CyanString("%s://%s/_/", schema, serverConfig.Addr))
 			}
